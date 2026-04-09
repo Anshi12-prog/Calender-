@@ -30,6 +30,7 @@ Notes on implementation
 - No backend is included; notes are saved to localStorage as simple keys.
 - The range note key is `range-note:YYYY-MM-DD|YYYY-MM-DD` and the month note key is `month-note:YYYY-M`.
 - The hero uses a royalty-free Unsplash image as a visual anchor; swap `HERO_IMAGE` in `src/components/WallCalendar.jsx` to change.
+ - The hero uses a royalty-free Unsplash image as a visual anchor by default. You can also upload a local image using the file control in the header — uploaded images are stored in `localStorage` (same-origin) so color extraction from the image will succeed. If the remote image blocks canvas access due to CORS, color extraction will fail silently and the default accent will be used; uploading a local image or hosting the image with permissive CORS headers fixes this.
 
 Suggested improvements / extras
 
